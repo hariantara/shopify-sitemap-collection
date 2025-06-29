@@ -22,7 +22,7 @@ Then, use it in your TypeScript or JavaScript project:
 import { getSitemapUrls } from 'shopify-sitemap-collection';
 
 (async () => {
-  const result = await getSitemapUrls('https://www.allbirds.com');
+  const result = await getSitemapUrls('https://<shopify_website>');
   console.log(result.products);      // Array of product URLs
   console.log(result.collections);   // Array of collection URLs
   console.log(result.pages);         // Array of page URLs
