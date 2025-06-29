@@ -1,17 +1,37 @@
 {
   "name": "shopify-sitemap-collection",
-  "version": "1.0.0",
-  "main": "index.ts",
+  "version": "1.0.3",
+  "main": "dist/index.js",
   "type": "module",
   "dependencies": {
     "axios": "^1.6.0",
     "fast-xml-parser": "^4.2.4"
   },
   "scripts": {
+    "build": "tsc",
     "test": "node --loader ts-node/esm test.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
-  }
+  },
+  "keywords": [
+    "shopify",
+    "sitemap",
+    "shopify-sitemap",
+    "shopify scraper",
+    "shopify collection",
+    "shopify products",
+    "shopify api",
+    "ecommerce",
+    "xml parser",
+    "url classifier",
+    "nodejs",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }

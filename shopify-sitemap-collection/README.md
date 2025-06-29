@@ -7,7 +7,35 @@ A utility to fetch and classify Shopify store sitemap URLs into products, collec
 - Fetches and parses sitemap.xml
 - Classifies URLs into products, collections, pages, and blogs
 
-## Usage
+## Usage in Your Project
+
+First, install the package:
+
+```bash
+npm install shopify-sitemap-collection
+```
+
+Then, use it in your TypeScript or JavaScript project:
+
+```ts
+// ESM/TypeScript
+import { getSitemapUrls } from 'shopify-sitemap-collection';
+
+(async () => {
+  const result = await getSitemapUrls('https://www.allbirds.com');
+  console.log(result.products);      // Array of product URLs
+  console.log(result.collections);   // Array of collection URLs
+  console.log(result.pages);         // Array of page URLs
+  console.log(result.blogs);         // Array of blog URLs
+})();
+```
+
+> **Note:** If you are using CommonJS, you may need to use dynamic import:
+> ```js
+> const { getSitemapUrls } = await import('shopify-sitemap-collection');
+> ```
+
+## Usage for Development/Testing
 
 ### Prerequisites
 - Node.js v18 or later
@@ -35,4 +63,4 @@ node --loader ts-node/esm test.ts
 - `test.ts` - Example/test script
 
 ## License
-MIT 
+MIT
